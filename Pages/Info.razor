@@ -1,0 +1,34 @@
+﻿@page "/Info"
+@using ChabadNapa.Components
+@using ChabadNapa.Models
+
+@inject HttpClient Http
+
+<PageTitle>Chabad Napa</PageTitle>
+
+<div class="w-100" style="height: 150px; background: url(/AyiaNapa.jpg) no-repeat fixed;">
+    <div class="w-100 h-100">
+        <h1 class="text-white text-center w-100" style="font-weight: 800;">
+            title
+        </h1>
+    </div>
+</div>
+
+<div class="container py-3 text-center" style={{maxWidth:800}}>
+    <div class="row mx-0" style="place-content: center;">
+        @foreach(var cat in _InfoCategories)
+        {
+            <Card Title="@cat.Title" Link="@cat.Link" ImgSrc="@cat.ImgUrl"/>
+        }
+    </div>
+</div>
+
+@code {
+
+    InfoItem[]? _InfoCategories;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        _InfoCategories = await Http.GetFromJsonAsync<InfoItem[]>("data/categoris.json");
+    }
+}

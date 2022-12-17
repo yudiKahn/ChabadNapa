@@ -1,0 +1,22 @@
+﻿<a href="@Link" class="card card-custom bg-white border-white border-0 m-3">
+    @if (!string.IsNullOrEmpty(ImgSrc))
+    {
+        <div class="card-custom-img" style="background-image: url(@ImgSrc)"></div>
+    }
+
+    <div class="card-body py-0" style="overflow-y: auto">
+        <h4 class="card-title text-dark">@Title</h4>
+    </div>
+</a>
+
+@code {
+
+    [Parameter]
+    public string? Link { get; set; } = "/404";
+
+    [Parameter]
+    public string? ImgSrc { get; set; }
+
+    [Parameter]
+    public string? Title { get; set; }
+}

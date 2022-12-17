@@ -5,7 +5,15 @@
     <NotFound>
         <PageTitle>Not found</PageTitle>
         <LayoutView Layout="@typeof(MainLayout)">
-            <p role="alert">Sorry, there's nothing at this address.</p>
+            <div style="min-height: 90vh; display: grid; place-content: center;">
+                <h4>
+                    404 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    page not found
+                </h4>
+                <a href="/" class="mt-3 text-center" style="color: var(--blue)">
+                    LET'S GO HOME
+                </a>
+            </div>
         </LayoutView>
     </NotFound>
 </Router>
