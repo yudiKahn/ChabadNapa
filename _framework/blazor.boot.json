@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "ChabadNapa.dll": "sha256-DZypvMxtPzoH2szK2birJlPMlOhPyLxXQ\/1SSe83oUw=",
+      "ChabadNapa.dll": "sha256-77aqePrhtDxFjMSYxfn9SALUiTe59yRn1CDoSg5VzYk=",
       "Microsoft.AspNetCore.Components.dll": "sha256-yv8TOfA7MUpunTz8MSDfqgTn9lcbZm02bFrIR6JHXsU=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-I6CERuqPQbZNVOOczu\/lCpKWGqx5YLwwW6xFe1qsCuY=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-TCGM2N8DM514lGOQ89fYjl7JsBoNZ2q+UXkj27XyGv4=",
