@@ -1,0 +1,31 @@
+﻿@page "/Info/{category}"
+@using ChabadNapa.Components
+@using ChabadNapa.Extensions
+@using ChabadNapa.Models
+
+@inject HttpClient Http
+
+<PageTitle>Chabad Napa</PageTitle>
+
+<PageHeader Title=@String.Format($"Info / {Category}") />
+
+<div class="row mx-0" style="place-content: center">
+    @foreach (var item in _InfoItems)
+    {
+        <Card ImgSrc="@item.Img"
+              Title="@item.Name"/>
+    }
+</div>
+
+@code {
+
+    [Parameter]
+    public string? Category { get; set; }
+
+    InfoItem[]? _InfoItems;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _InfoItems = await Http.GetFromJsonAsync<InfoItem[]>("/data/infoItems.json");
+    }
+}

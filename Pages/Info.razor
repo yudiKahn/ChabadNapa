@@ -1,28 +1,31 @@
 ﻿@page "/Info"
 @using ChabadNapa.Components
+@using ChabadNapa.Extensions
 @using ChabadNapa.Models
 
 @inject HttpClient Http
 
 <PageTitle>Chabad Napa</PageTitle>
 
-<PageHeader Title="Info"/>
+<PageHeader Title="Info" />
 
 <div class="container py-3 text-center" style={{maxWidth:800}}>
     <div class="row mx-0" style="place-content: center;">
-        @foreach(var cat in _InfoCategories)
+        @foreach (var cat in _InfoCategories)
         {
-            <Card Title="@cat.Title" Link="@cat.Link" ImgSrc="@cat.ImgUrl"/>
+            <Card Title="@cat.Key.ToFriendlyString()"
+              Link="@string.Format($"Info/{cat.Key}")"
+              ImgSrc="@cat.Value" />
         }
     </div>
 </div>
 
 @code {
 
-    InfoItem[]? _InfoCategories;
-    
+    Dictionary<InfoCategory, string>? _InfoCategories;
+
     protected override async Task OnInitializedAsync()
     {
-        _InfoCategories = await Http.GetFromJsonAsync<InfoItem[]>("data/categoris.json");
+        _InfoCategories = await Http.GetFromJsonAsync<Dictionary<InfoCategory, string>>("/data/categories.json");
     }
 }
