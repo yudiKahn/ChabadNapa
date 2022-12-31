@@ -1,9 +1,11 @@
 ﻿@page "/ShabbatMeals"
 @using ChabadNapa.Components
 
+@inherits ChabadNapa.Models.PageBase
+
 <PageTitle>Chabad Napa</PageTitle>
 
-<PageHeader Title="Shabbat Meals"/>
+<PageHeader Title="@Loc.Keys["shabbat_meals"]" />
 
 <iframe class="donate-frame" src="https://reg.koshertraveling.co/ayi/f/"></iframe>
 

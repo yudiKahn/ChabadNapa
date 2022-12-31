@@ -1,19 +1,17 @@
 ﻿@page "/Donate"
 @using ChabadNapa.Components
 
+@inherits ChabadNapa.Models.PageBase
+
 <PageTitle>Chabad Napa</PageTitle>
 
-<PageHeader Title="Donate"/>
+<PageHeader Title="@Loc.Keys["donate"]" />
 
 <div style="display: grid; place-content: center; margin-top: 20px;">
     <a href="https://secure.cardcom.co.il/e/6Cv/" class="btn btn-blue" target="_blank" rel="noreferrer">
-        {text[lang].btn}
+        @Loc.Keys["safe_donate"]
     </a>
 </div>
 <div style="display: grid; place-content: center; margin-top: 20px;">
     <iframe src="https://secure.cardcom.co.il/e/6Cv/" class="donate-frame"></iframe>
 </div>
-
-@code {
-
-}

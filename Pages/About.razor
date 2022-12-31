@@ -1,16 +1,18 @@
 ﻿@page "/About"
 @using ChabadNapa.Components
 
+@inherits ChabadNapa.Models.PageBase
+
 <PageTitle>Chabad Napa</PageTitle>
 
-<PageHeader Title="About"/>
+<PageHeader Title="@Loc.Keys["about"]"/>
 
 <div class="container-sm py-5" style="min-height: 100vh; max-width: 700px;">
     <img class="w-100 mb-3" alt="chabbad aya napa nymark family" src="/family.jpeg"
          style="box-shadow: 1px 2px 10px black;"/>
     <p style="font-size: 25px;">
         <!-- {{fontSize:25,textAlign:lang = ='he' ?'right':'left'}} -->
-        <i>about</i>
+        <i>@Loc.Keys["about_paragraph"]</i>
     </p>
     <hr />
 </div>

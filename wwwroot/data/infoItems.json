@@ -3,47 +3,42 @@
     "name": "Chabad House",
     "img": "https://chabbad-cyprus.herokuapp.com/chabbadHouse.jpg",
     "location": "",
-    "categories": []
+    "categories": [ "PlacesToTravel", "CovidTest" ]
   },
   {
     "name": "Love Bridge",
     "img": "https://www.swedishnomad.com/wp-content/images/2019/01/Cape-Greco.jpg",
     "location": "https://www.google.com/maps/place/Love+Bridge,+Kryou+Nerou,+Ayia+Napa/data=!4m2!3m1!1s0x14dfc51e064a366b:0x3ba4e0221f66ee28?utm_source=mstt_1&entry=gps",
-    "categories": []
+    "categories": [ "Beach" ]
   },
   {
     "name": "Sea Caves",
     "img": "https://previews.123rf.com/images/kirillm/kirillm1603/kirillm160300118/56221136-sea-caves-near-ayia-napa-cyprus-.jpg",
     "location": "https://maps.app.goo.gl/a4moDLMZxd46HhMh6",
-    "categories": []
+    "categories": [ "Beach" ]
   },
   {
     "name": "Cape Kargo",
     "img": "https://lh5.googleusercontent.com/p/AF1QipNAWqRah_yOi_H6LEhe7c8eAAj8E-_3UYHIwS0Z=w408-h306-k-no",
     "location": "https://maps.app.goo.gl/yCe5u38KdZwjs69U6",
-    "categories": []
+    "categories": [ "Beach" ]
   },
   {
     "name": "Nissi Beach",
     "img": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/215627009.jpg?k=3cea07e0ac5700c9cf8c69be80bb77fc60289cb10b61f0b068c2e124e9a1ad6a&o=&hp=1",
     "location": "https://maps.app.goo.gl/U8qpPW8n3aqVQDSc6",
-    "categories": []
+    "categories": [ "Beach" ]
   },
   {
     "name": "Konnos Beach",
     "img": "https://www.swedishnomad.com/wp-content/images/2019/08/Konnos-Bay.jpg",
     "location": "https://maps.app.goo.gl/r99CYSr3oMGWFfM26",
-    "categories": []
+    "categories": [ "Beach" ]
   },
   {
     "name": "Fig tree Bay",
     "img": "https://media-cdn.tripadvisor.com/media/photo-s/03/ab/21/12/fig-tree-bay.jpg",
     "location": "https://maps.app.goo.gl/kTnPLXexnKcSVgCeA",
-    "categories": []
-  },
-  {
-    "name": "",
-    "img": "",
-    "location": ""
+    "categories": [ "Beach" ]
   }
 ]

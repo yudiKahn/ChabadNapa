@@ -10,10 +10,21 @@
 <PageHeader Title=@String.Format($"Info / {Category}") />
 
 <div class="row mx-0" style="place-content: center">
-    @foreach (var item in _InfoItems)
+    @if (CurrInfoItems?.Any() ?? false)
     {
-        <Card ImgSrc="@item.Img"
-              Title="@item.Name"/>
+        @foreach (var item in CurrInfoItems)
+        {
+            <Card ImgSrc="@item.Img"
+          Title="@item.Name" />
+        }
+    }
+    else
+    {
+        <div style="min-height: 90vh; display: grid; place-content: center;">
+            <h4>
+                No items found
+            </h4>
+        </div>
     }
 </div>
 
@@ -22,10 +33,21 @@
     [Parameter]
     public string? Category { get; set; }
 
-    InfoItem[]? _InfoItems;
+    public InfoItem[]? CurrInfoItems { get; set; }
+    
+    InfoCategory _Category;
 
     protected override async Task OnInitializedAsync()
     {
-        _InfoItems = await Http.GetFromJsonAsync<InfoItem[]>("/data/infoItems.json");
+        if (!Enum.TryParse<InfoCategory>(Category, out var cat)) return;
+
+        _Category = cat;
+
+        var resp = await Http.GetFromJsonAsync<InfoItem[]>("/data/infoItems.json");
+
+        CurrInfoItems = resp?
+            .Where(i => i.GetCategories().Any(c => c == _Category))
+            .ToArray();
+
     }
 }

@@ -18,4 +18,12 @@ public static class Extensions
             _ => string.Empty
         };
     }
+
+    public static InfoCategory[] GetCategories(this InfoItem item)
+    {
+        return item.Categories
+                .Where(c => Enum.TryParse<InfoCategory>(c, out _))
+                .Select(Enum.Parse<InfoCategory>)
+                .ToArray();
+    }
 }

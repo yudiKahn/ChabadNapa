@@ -1,34 +1,34 @@
-﻿@page "/Info"
+﻿@page "/Hotels"
 @using ChabadNapa.Components
-@using ChabadNapa.Extensions
 @using ChabadNapa.Models
 
-@inherits PageBase
+@inherits ChabadNapa.Models.PageBase
 @inject HttpClient Http
 
 <PageTitle>Chabad Napa</PageTitle>
 
-<PageHeader Title="@Loc.Keys["info"]" />
+<PageHeader Title="@Loc.Keys["hotels"]" />
+
 
 <div class="container py-3 text-center" style={{maxWidth:800}}>
     <div class="row mx-0" style="place-content: center;">
         @foreach (var cat in _InfoCategories)
         {
-            <Card Title="@cat.Key.ToFriendlyString()"
-              Link="@string.Format($"Info/{cat.Key}")"
-              ImgSrc="@cat.Value" />
+            <Card Title="@(State.IsCulture("he-IL") ? cat.Title.He : cat.Title.En)"
+                  Link="@cat.Link"
+                  ImgSrc="@cat.Img" />
         }
     </div>
 </div>
 
-@code {
-
-    Dictionary<InfoCategory, string>? _InfoCategories;
+@code
+{
+    Hotel[]? _InfoCategories;
 
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
 
-        _InfoCategories = await Http.GetFromJsonAsync<Dictionary<InfoCategory, string>>("/data/categories.json");
+        _InfoCategories = await Http.GetFromJsonAsync<Hotel[]>("/data/hotels.json");
     }
 }

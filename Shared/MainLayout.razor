@@ -1,77 +1,10 @@
-﻿@inherits LayoutComponentBase
+﻿@using ChabadNapa.Components
+
+@inherits LayoutComponentBase
 
 <div>
-    <header id="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white font-bold">
-            <div class="row mx-0 w-100 justify-content-between">
-                <div class="nav-col-1">
-                    <a href="/">
-                        <a class="navbar-brand">
-                            <img src="/logo.jpg" alt="logo" class="w-100 h-100" />
-                        </a>
-                    </a>
-                </div>
-                <div class="nav-col-2">
-                    <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-coll" aria-controls="nav-coll" aria-expanded="false" aria-label="Toggle navigation">
-                        <span></span>
-                    </button>
-                </div>
-                <div class="row w-100 collapse navbar-collapse justify-content-center" id="nav-coll">
-                    <ul class="navbar-nav">
-                        <!-- style={{direction:lang==='he'?'rtl':'ltr'}} -->
-                        <li class="nav-item active">
-                            <a href="/" class="nav-link">home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/ShabbatMeals" class="nav-link">shabbat meals</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/About" class="nav-link">about</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Gallery" class="nav-link">gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Donate" class="nav-link">donate</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Info" class="nav-link">info</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Hotels" class="nav-link">hotels</a>
-                        </li>
-                        <li class="nav-item">
-                            <div class="nav-btns">
-                                <div class="col">
-                                    <!-- {${lang==='he'?'text-right':''}`} -->
-                                    <button class="btn btn-blue mx-1">
-                                        עברית
-                                    </button>
-                                    <button class="btn btn-blue mx-1">
-                                        English
-                                    </button>
-                                </div>
-                                <div class="col text-right">
-                                    <a href="https://www.facebook.com/chabadofnapa" target="_blank" rel="noreferrer">
-                                        <i class="btn btn-blue fab m-1 fa-facebook-f"></i>
-                                    </a>
-                                    <a href="https://www.instagram.com/chabad_ayia_napa/" target="_blank" rel="noreferrer">
-                                        <i class="btn btn-blue fab m-1 fa-instagram"></i>
-                                    </a>
-                                    <a target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=+35796640980&text=Hello">
-                                        <i class="btn btn-blue m-1 fab fa-whatsapp"></i>
-                                    </a>
-                                    <a href="/Admin">
-                                        <a class="btn btn-blue m-1 fas fa-user-lock"></a>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+  
+    <Navbar/>
 
     <main>
         @Body
