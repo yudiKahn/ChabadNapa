@@ -14,21 +14,21 @@
     <div class="row mx-0" style="place-content: center;">
         @foreach (var cat in _InfoCategories)
         {
-            <Card Title="@cat.Key.ToFriendlyString()"
-              Link="@string.Format($"Info/{cat.Key}")"
-              ImgSrc="@cat.Value" />
+            <Card Title=@(State.IsCulture("he-IL") ? cat.Title.He : cat.Title.En)
+              Link="@string.Format($"Info/{cat.Category}")"
+              ImgSrc="@cat.Img" />
         }
     </div>
 </div>
 
 @code {
 
-    Dictionary<InfoCategory, string>? _InfoCategories;
+    InfoCategory[]? _InfoCategories;
 
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
 
-        _InfoCategories = await Http.GetFromJsonAsync<Dictionary<InfoCategory, string>>("/data/categories.json");
+        _InfoCategories = await Http.GetFromJsonAsync<InfoCategory[]>("/data/categories.json");
     }
 }

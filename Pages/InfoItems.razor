@@ -3,11 +3,12 @@
 @using ChabadNapa.Extensions
 @using ChabadNapa.Models
 
+@inherits PageBase
 @inject HttpClient Http
 
 <PageTitle>Chabad Napa</PageTitle>
 
-<PageHeader Title=@String.Format($"Info / {Category}") />
+<PageHeader Title="@Loc.Keys["info"]" />
 
 <div class="row mx-0" style="place-content: center">
     @if (CurrInfoItems?.Any() ?? false)
@@ -35,18 +36,18 @@
 
     public InfoItem[]? CurrInfoItems { get; set; }
     
-    InfoCategory _Category;
+    InfoCategoryEnum _CategoryEnum;
 
     protected override async Task OnInitializedAsync()
     {
-        if (!Enum.TryParse<InfoCategory>(Category, out var cat)) return;
+        if (!Enum.TryParse<InfoCategoryEnum>(Category, out var cat)) return;
 
-        _Category = cat;
+        _CategoryEnum = cat;
 
         var resp = await Http.GetFromJsonAsync<InfoItem[]>("/data/infoItems.json");
 
         CurrInfoItems = resp?
-            .Where(i => i.GetCategories().Any(c => c == _Category))
+            .Where(i => i.GetCategories().Any(c => c == _CategoryEnum))
             .ToArray();
 
     }

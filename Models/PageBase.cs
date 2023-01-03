@@ -16,7 +16,7 @@ public class PageBase : ComponentBase, IDisposable
 
     public void Dispose()
     {
-        State.StateHasChanged += OnStateHasChanged;
+        State.StateHasChanged -= OnStateHasChanged;
     }
 
     protected override void OnAfterRender(bool firstRender)
