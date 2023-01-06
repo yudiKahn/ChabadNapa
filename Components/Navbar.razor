@@ -21,7 +21,31 @@
             <div class="row w-100 collapse navbar-collapse justify-content-center" id="nav-coll">
                 <ul class="navbar-nav" 
                     style=@string.Format($"direction: {(State.IsCulture("he-IL") ? "rtl" : "ltr")};")>
+                    
+                    <!-- todo -->
                     <li class="nav-item active">
+                        <a href="/ChabadNapa/" class="nav-link">@Loc.Keys["home"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/ChabadNapa/ShabbatMeals" class="nav-link">@Loc.Keys["shabbat_meals"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/ChabadNapa/About" class="nav-link">@Loc.Keys["about"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/ChabadNapa/Gallery" class="nav-link">@Loc.Keys["gallery"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/ChabadNapa/Donate" class="nav-link">@Loc.Keys["donate"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/ChabadNapa/Info" class="nav-link">@Loc.Keys["info"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/ChabadNapa/Hotels" class="nav-link">@Loc.Keys["hotels"]</a>
+                    </li>
+                    
+                    @*<li class="nav-item active">
                         <a href="/" class="nav-link">@Loc.Keys["home"]</a>
                     </li>
                     <li class="nav-item">
@@ -41,7 +65,8 @@
                     </li>
                     <li class="nav-item">
                         <a href="/Hotels" class="nav-link">@Loc.Keys["hotels"]</a>
-                    </li>
+                    </li>*@
+
                     <li class="nav-item">
                         <div class="nav-btns">
                             <div class=@string.Format($"col {(State.IsCulture("he-IL") ? "text-right" : "")}")>
