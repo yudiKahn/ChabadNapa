@@ -1,0 +1,50 @@
+﻿[
+  {
+    "category": "PlacesToTravel",
+    "img": "https://previews.123rf.com/images/kirillm/kirillm1603/kirillm160300118/56221136-sea-caves-near-ayia-napa-cyprus-.jpg",
+    "title": {
+      "he": "מקומות יפים",
+      "en": "Places To Travel"
+    }
+  },
+  {
+    "category": "Beach",
+    "img": "https://www.swedishnomad.com/wp-content/images/2019/08/Konnos-Bay.jpg",
+    "title": {
+      "he": "חופים",
+      "en": "Beach"
+    }
+  },
+  {
+    "category": "Attraction",
+    "img": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/2e/cc/07.jpg",
+    "title": {
+      "he": "אטרקציות",
+      "en": "Attraction"
+    }
+  },
+  {
+    "category": "Transportation",
+    "img": "https://cyprus-mail.com/wp-content/uploads/2020/06/bus-1-1920x1280.jpg",
+    "title": {
+      "he": "תחבורה ציבורית",
+      "en": "Transportation"
+    }
+  },
+  {
+    "category": "CovidTest",
+    "img": "https://i1.wp.com/www.touristisrael.com/wp-content/uploads/2021/05/covidtest-1-scaled.jpg?resize=1024%2C683&ssl=1",
+    "title": {
+      "he": "בדיקות קורונה",
+      "en": "Covid Test"
+    }
+  },
+  {
+    "category": "TravelGuides",
+    "img": "https://more-explore.com/wp-content/uploads/2019/05/A-Brief-Note-About-Travel-Guides.jpg",
+    "title": {
+      "he": "מדריכי טיולים",
+      "en": "Travel Guides"
+    }
+  }
+]
