@@ -7,11 +7,13 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white font-bold">
         <div class="row mx-0 w-100 justify-content-between">
             <div class="nav-col-1">
-                <a href="/">
-                    <a class="navbar-brand">
-                        <img src="/logo.jpg" alt="logo" class="w-100 h-100" />
-                    </a>
+                <!--todo-->
+                <a class="navbar-brand" href="/ChabadNapa/">
+                    <img src="/ChabadNapa/logo.jpg" alt="logo" class="w-100 h-100" />
                 </a>
+                @*<a class="navbar-brand" href="/">
+                    <img src="/logo.jpg" alt="logo" class="w-100 h-100" />
+                </a>*@
             </div>
             <div class="nav-col-2">
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-coll" aria-controls="nav-coll" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,9 +21,9 @@
                 </button>
             </div>
             <div class="row w-100 collapse navbar-collapse justify-content-center" id="nav-coll">
-                <ul class="navbar-nav" 
+                <ul class="navbar-nav"
                     style=@string.Format($"direction: {(State.IsCulture("he-IL") ? "rtl" : "ltr")};")>
-                    
+
                     <!-- todo -->
                     <li class="nav-item active">
                         <a href="/ChabadNapa/" class="nav-link">@Loc.Keys["home"]</a>
@@ -44,27 +46,27 @@
                     <li class="nav-item">
                         <a href="/ChabadNapa/Hotels" class="nav-link">@Loc.Keys["hotels"]</a>
                     </li>
-                    
+
                     @*<li class="nav-item active">
-                        <a href="/" class="nav-link">@Loc.Keys["home"]</a>
+                    <a href="/" class="nav-link">@Loc.Keys["home"]</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/ShabbatMeals" class="nav-link">@Loc.Keys["shabbat_meals"]</a>
+                    <a href="/ShabbatMeals" class="nav-link">@Loc.Keys["shabbat_meals"]</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/About" class="nav-link">@Loc.Keys["about"]</a>
+                    <a href="/About" class="nav-link">@Loc.Keys["about"]</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/Gallery" class="nav-link">@Loc.Keys["gallery"]</a>
+                    <a href="/Gallery" class="nav-link">@Loc.Keys["gallery"]</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/Donate" class="nav-link">@Loc.Keys["donate"]</a>
+                    <a href="/Donate" class="nav-link">@Loc.Keys["donate"]</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/Info" class="nav-link">@Loc.Keys["info"]</a>
+                    <a href="/Info" class="nav-link">@Loc.Keys["info"]</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/Hotels" class="nav-link">@Loc.Keys["hotels"]</a>
+                    <a href="/Hotels" class="nav-link">@Loc.Keys["hotels"]</a>
                     </li>*@
 
                     <li class="nav-item">
@@ -101,7 +103,7 @@
 
 
 @code {
-    
+
     void ChangeLanguage(string culture)
     {
         State.Culture = CultureInfo.GetCultureInfo(culture);
