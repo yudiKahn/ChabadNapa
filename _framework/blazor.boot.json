@@ -8,7 +8,7 @@
   "resources": {
     "assembly": {
       "AKSoftware.Localization.MultiLanguages.dll": "sha256-RaOkPrp1Fifafc3rcevYHCFyTCf2m28scUudZ0sc3jo=",
-      "ChabadNapa.dll": "sha256-4hUzZno1VTBskLRk+h7BRlCpZN\/QHZ5elS+CrYcQXfc=",
+      "ChabadNapa.dll": "sha256-\/xS5ZCi+TOeVezZTDkKe2kOpmb4mhtFwxr5ZUeLsXTQ=",
       "Microsoft.AspNetCore.Components.dll": "sha256-M0i2aArNkH1tWpmYSkMR2m5ZwLzqM99meDI4CG4Z34E=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-I6CERuqPQbZNVOOczu\/lCpKWGqx5YLwwW6xFe1qsCuY=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-TCGM2N8DM514lGOQ89fYjl7JsBoNZ2q+UXkj27XyGv4=",
