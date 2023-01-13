@@ -30,7 +30,7 @@
         await base.OnInitializedAsync();
 
         //todo
-        _InfoCategories = await Http.GetFromJsonAsync<Hotel[]>("/ChabadNapa/data/hotels.json");
-        //_InfoCategories = await Http.GetFromJsonAsync<Hotel[]>("/data/hotels.json");
+        //_InfoCategories = await Http.GetFromJsonAsync<Hotel[]>("/ChabadNapa/data/hotels.json");
+        _InfoCategories = await Http.GetFromJsonAsync<Hotel[]>("/data/hotels.json");
     }
 }

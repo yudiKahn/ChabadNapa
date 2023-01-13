@@ -45,8 +45,8 @@
         _CategoryEnum = cat;
 
         //todo
-        var resp = await Http.GetFromJsonAsync<InfoItem[]>("/ChabadNapa/data/infoItems.json");
-        //var resp = await Http.GetFromJsonAsync<InfoItem[]>("/data/infoItems.json");
+        //var resp = await Http.GetFromJsonAsync<InfoItem[]>("/ChabadNapa/data/infoItems.json");
+        var resp = await Http.GetFromJsonAsync<InfoItem[]>("/data/infoItems.json");
 
         CurrInfoItems = resp?
             .Where(i => i.GetCategories().Any(c => c == _CategoryEnum))

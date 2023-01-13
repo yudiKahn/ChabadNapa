@@ -14,16 +14,15 @@
     <div class="row mx-0" style="place-content: center;">
         @foreach (var cat in _InfoCategories)
         {
-            <Card Title=@(State.IsCulture("he-IL") ? cat.Title.He : cat.Title.En)
-                  Link="@string.Format($"/ChabadNapa/Info/{cat.Category}")"
-                  ImgSrc="@cat.Img" />
-
             
             <!-- todo -->
-            @*
+            @*<Card Title=@(State.IsCulture("he-IL") ? cat.Title.He : cat.Title.En)
+                  Link="@string.Format($"/ChabadNapa/Info/{cat.Category}")"
+                  ImgSrc="@cat.Img" />*@
+
             <Card Title=@(State.IsCulture("he-IL") ? cat.Title.He : cat.Title.En)
                   Link="@string.Format($"Info/{cat.Category}")"
-                  ImgSrc="@cat.Img" />*@
+                  ImgSrc="@cat.Img" />
         }
     </div>
 </div>
@@ -37,7 +36,7 @@
         await base.OnInitializedAsync();
 
         //todo
-        _InfoCategories = await Http.GetFromJsonAsync<InfoCategory[]>("/ChabadNapa/data/categories.json");
-        //_InfoCategories = await Http.GetFromJsonAsync<InfoCategory[]>("/data/categories.json");
+        //_InfoCategories = await Http.GetFromJsonAsync<InfoCategory[]>("/ChabadNapa/data/categories.json");
+        _InfoCategories = await Http.GetFromJsonAsync<InfoCategory[]>("/data/categories.json");
     }
 }
