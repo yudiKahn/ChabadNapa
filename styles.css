@@ -10,9 +10,9 @@ html, body {
 
 @font-face {
     font-family: 'font';
-    src: url('/ChabadNapa/VarelaRound-Regular.ttf');
     /*todo*/
-    /*src: url('/VarelaRound-Regular.ttf');*/
+    /*src: url('/ChabadNapa/VarelaRound-Regular.ttf');*/
+    src: url('/VarelaRound-Regular.ttf');
 }
 /*A*/
 
@@ -44,8 +44,8 @@ html, body {
     height: 80vh;
     position: relative;
     /*todo*/
-    background-image: url('/ChabadNapa/bg.jpg');
-    /*background-image: url('/bg.jpg');*/
+    /*background-image: url('/ChabadNapa/bg.jpg');*/
+    background-image: url('/bg.jpg');
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
