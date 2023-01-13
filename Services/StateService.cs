@@ -1,5 +1,3 @@
-using System;
-using System.Globalization;
 using System.Runtime.CompilerServices;
 using AKSoftware.Localization.MultiLanguages;
 using CultureInfo = System.Globalization.CultureInfo;
