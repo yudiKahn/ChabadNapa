@@ -33,9 +33,10 @@ public class StateService
     }
 
 
-    bool SetProperty<T>(ref T field, T val, [CallerMemberName] string propName = null)
+    bool SetProperty<T>(ref T field, T val, [CallerMemberName] string? propName = null)
     {
         if (EqualityComparer<T>.Default.Equals(field, val)) return false;
+        if (propName is null) return false;
 
         field = val;
         StateHasChanged?.Invoke(this, propName);
