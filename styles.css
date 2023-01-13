@@ -11,7 +11,6 @@ html, body {
 @font-face {
     font-family: 'font';
     /*todo*/
-    /*src: url('/ChabadNapa/VarelaRound-Regular.ttf');*/
     src: url('/VarelaRound-Regular.ttf');
 }
 /*A*/
@@ -44,7 +43,6 @@ html, body {
     height: 80vh;
     position: relative;
     /*todo*/
-    /*background-image: url('/ChabadNapa/bg.jpg');*/
     background-image: url('/bg.jpg');
     background-attachment: fixed;
     background-position: top;
