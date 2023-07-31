@@ -1,5 +1,6 @@
 using System.Runtime.CompilerServices;
 using AKSoftware.Localization.MultiLanguages;
+using Microsoft.JSInterop;
 using CultureInfo = System.Globalization.CultureInfo;
 
 namespace ChabadNapa.Services;
@@ -8,6 +9,7 @@ public class StateService
 {
 
     readonly ILanguageContainerService _LocService;
+    readonly IJSRuntime _JsRuntime;
 
     CultureInfo _Culture;
 
@@ -25,18 +27,21 @@ public class StateService
 
     public bool IsCulture(string cul) => cul == _LocService.CurrentCulture.Name;
 
-    public event EventHandler<string> StateHasChanged;
+    public event EventHandler<string>? StateHasChanged;
 
-    public StateService(ILanguageContainerService locService)
+    public StateService(ILanguageContainerService locService, IJSRuntime jsRuntime)
     {
         _LocService = locService;
+        _JsRuntime = jsRuntime;
+
+        
     }
 
 
     bool SetProperty<T>(ref T field, T val, [CallerMemberName] string? propName = null)
     {
-        if (EqualityComparer<T>.Default.Equals(field, val)) return false;
         if (propName is null) return false;
+        if (EqualityComparer<T>.Default.Equals(field, val)) return false;
 
         field = val;
         StateHasChanged?.Invoke(this, propName);

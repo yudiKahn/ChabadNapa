@@ -8,11 +8,9 @@ public class PageBase : ComponentBase, IDisposable
 {
     bool _UsedOnAfterRender;
 
-    [Inject] 
-    public StateService State { get; set; }
+    [Inject] public StateService State { get; set; }
 
-    [Inject]
-    public ILanguageContainerService Loc { get; set; }
+    [Inject] public ILanguageContainerService Loc { get; set; }
 
     public void Dispose()
     {
